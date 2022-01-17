@@ -26,10 +26,6 @@ console.log('main.js is alive');
 //     })
 //     .then(data => funcLoad(data));
 
-// const funcLoad = (data) => {
-//     console.log(data);
-// }
-
 const fetchData = async() => {
     const response = await fetch('/data');
     const data = await response.json();
@@ -37,5 +33,9 @@ const fetchData = async() => {
 }
 
 fetchData().then(data => {
-    console.log(data);
+    funcLoad(data);
 });
+
+const funcLoad = (data) => {
+    console.log(data);
+}
